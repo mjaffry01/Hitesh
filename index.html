@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hitesh Kumar - Senior Design Manager</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9ecef;
+            color: #343a40;
+            scroll-behavior: smooth;
+        }
+
+        .resume {
+            background-color: #fff;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title i {
+            margin-right: 10px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #007bff;
+            bottom: 0;
+            left: 0;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: #007bff;
+            font-size: 24px;
+        }
+
+        .skills-list,
+        .education-list,
+        .experience-list,
+        .projects-list,
+        .personal-details-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li,
+        .education-list li,
+        .personal-details-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-list li i,
+        .education-list li i,
+        .personal-details-list li i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .experience-item,
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        .experience-item h3,
+        .project-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+        }
+
+        .experience-item h3 i,
+        .project-item h3 i {
+            margin-right: 10px;
+        }
+
+        .experience-item h4,
+        .project-item h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: #6c757d;
+        }
+
+        .experience-item ul,
+        .project-item ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .profile-summary {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info a i {
+            margin-right: 5px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            color: #007bff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #343a40 !important;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important;
+        }
+
+        /* Adjusting resume top margin to accommodate fixed navbar */
+        .resume {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Hitesh Kumar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#competencies">Competencies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Technical Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#personal">Personal</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="resume">
+        <!-- Header Section -->
+        <div class="text-center" id="top">
+            <div class="name">Hitesh Kumar</div>
+            <div class="title"><i class="bi bi-briefcase-fill"></i>Senior Design Manager</div>
+            <div class="contact-info">
+                <p><i class="bi bi-telephone-fill"></i>+91 9818829253 | <i class="bi bi-envelope-fill"></i><a
+                        href="mailto:mail2hitesh@gmail.com">mail2hitesh@gmail.com</a></p>
+                <p><i class="bi bi-geo-alt-fill"></i>Delhi-NCR, India</p>
+            </div>
+        </div>
+
+        <!-- Profile Summary -->
+        <div class="profile-summary" id="profile">
+            <h2 class="section-title"><i class="bi bi-file-earmark-text-fill"></i>Profile Summary</h2>
+            <p>
+                A visionary and results-driven Senior Design Manager with over 21 years of extensive experience in UI/UX
+                design, animation, and corporate branding. Renowned for pioneering innovative design strategies and
+                integrating cutting-edge AI technologies to revolutionize user experiences. Proven track record in
+                leading cross-functional teams, managing high-stake projects, and fostering strong client relationships
+                to drive business growth and brand excellence.
+            </p>
+        </div>
+
+        <!-- Core Competencies -->
+        <div class="core-competencies" id="competencies">
+            <h2 class="section-title"><i class="bi bi-gear-fill"></i>Core Competencies</h2>
+            <ul class="skills-list row">
+                <li class="col-md-6"><i class="bi bi-person-badge-fill"></i>Leadership &amp; Team Management</li>
+                <li class="col-md-6"><i class="bi bi-palette-fill"></i>UI/UX Design Excellence</li>
+                <li class="col-md-6"><i class="bi bi-brain"></i>AI Integration in Design</li>
+                <li class="col-md-6"><i class="bi bi-film"></i>Video Editing &amp; Animation</li>
+                <li class="col-md-6"><i class="bi bi-bullseye"></i>Digital Marketing Strategies</li>
+                <li class="col-md-6"><i class="bi bi-display"></i>Interactive Media Design</li>
+                <li class="col-md-6"><i class="bi bi-people-fill"></i>Stakeholder Engagement</li>
+                <li class="col-md-6"><i class="bi bi-bar-chart-fill"></i>Performance Metrics &amp; KPIs</li>
+            </ul>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="technical-skills" id="skills">
+            <h2 class="section-title"><i class="bi bi-tools"></i>Technical Skills</h2>
+            <ul class="skills-list">
+                <li><i class="bi bi-check-circle-fill"></i>Proficient in Adobe Creative Suite: Photoshop, Illustrator, Premiere Pro, After Effects, Adobe XD</li>
+                <li><i class="bi bi-check-circle-fill"></i>Expertise in UX/UI design, video editing, and multimedia production</li>
+                <li><i class="bi bi-check-circle-fill"></i>Skilled in client engagement, project management, and digital marketing</li>
+            </ul>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="professional-experience" id="experience">
+            <h2 class="section-title"><i class="bi bi-briefcase-fill"></i>Professional Experience</h2>
+
+            <div class="experience-item">
+                <h3><i class="bi bi-building-fill"></i>DXC Technology</h3>
+                <h4>Senior Design Manager | July 2011 - September 2024</h4>
+                <ul>
+                    <li>Steered design initiatives by integrating AI into UX/UI projects, significantly enhancing user experiences and engagement.</li>
+                    <li>Managed and mentored cross-functional teams to deliver innovative design solutions within stipulated timelines and budgets.</li>
+                    <li>Collaborated with global clients to understand their vision and translated it into compelling design strategies.</li>
+                    <li>Pioneered the redesign of client websites, achieving a 30% increase in user engagement.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3><i class="bi bi-building-fill"></i>Deloitte Support Services India Pvt. Ltd.</h3>
+                <h4>Analyst | February 2007 - July 2011</h4>
+                <ul>
+                    <li>Enhanced global client proposals with high-impact design assets, contributing to successful business acquisitions.</li>
+                    <li>Collaborated with international teams to deliver consistent and brand-aligned design solutions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="projects" id="projects">
+            <h2 class="section-title"><i class="bi bi-folder-fill"></i>Key Projects</h2>
+
+            <div class="project-item">
+                <h3><i class="bi bi-laptop-fill"></i>Deutz Webpages Refresh</h3>
+                <h4>UI Designer | August 2022</h4>
+                <ul>
+                    <li>Redesigned the client's website with a modern and user-friendly interface using HTML and CSS.</li>
+                    <li>Led UI redesign workshops with cross-functional teams, fostering collaborative innovation.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3><i class="bi bi-cart-fill"></i>Ahold Enterprise Marketplace</h3>
+                <h4>UI Designer &amp; Solution Architect | January 2022</h4>
+                <ul>
+                    <li>Conceptualized and developed interactive prototypes catering to multiple user roles.</li>
+                    <li>Worked closely with a global team to deliver a seamless and intuitive marketplace experience.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="education" id="education">
+            <h2 class="section-title"><i class="bi bi-mortarboard-fill"></i>Education</h2>
+            <ul class="education-list">
+                <li><i class="bi bi-book-fill"></i><strong>Bachelor of Arts</strong> | Zakir Husain College, Delhi University | 2006</li>
+                <li><i class="bi bi-book-fill"></i><strong>Advanced Diploma in Multimedia &amp; Animation</strong> | ARENA Multimedia | 2003</li>
+                <li><i class="bi bi-book-fill"></i><strong>Certificate in Digital Film Animation</strong> | Webcom Technology | 2005</li>
+            </ul>
+        </div>
+
+        <!-- Personal Details -->
+        <div class="personal-details" id="personal">
+            <h2 class="section-title"><i class="bi bi-person-circle"></i>Personal Details</h2>
+            <ul class="personal-details-list">
+                <li><i class="bi bi-calendar-fill"></i><strong>Date of Birth:</strong> 25th November 1983</li>
+                <li><i class="bi bi-translate"></i><strong>Languages:</strong> English, Hindi</li>
+                <li><i class="bi bi-house-fill"></i><strong>Address:</strong> Delhi-NCR, India</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
